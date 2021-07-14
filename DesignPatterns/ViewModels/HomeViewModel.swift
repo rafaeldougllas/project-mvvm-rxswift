@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  HomeViewModel.swift
 //  DesignPatterns
 //
 //  Created by Rafael Douglas on 07/07/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ViewModel: NSObject {
+class HomeViewModel: NSObject {
     private var apiService : APIService!
     
     // MARK: - Closures
