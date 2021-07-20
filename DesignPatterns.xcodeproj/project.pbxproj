@@ -20,6 +20,7 @@
 		5335E4E62644D95900DB3BF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5335E4E42644D95900DB3BF5 /* LaunchScreen.storyboard */; };
 		5335E4F12644D95900DB3BF5 /* DesignPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335E4F02644D95900DB3BF5 /* DesignPatternsTests.swift */; };
 		5335E4FC2644D95900DB3BF5 /* DesignPatternsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335E4FB2644D95900DB3BF5 /* DesignPatternsUITests.swift */; };
+		53CD851B26A65FA400C361D3 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CD851A26A65FA400C361D3 /* EmployeeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		5335E4F72644D95900DB3BF5 /* DesignPatternsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignPatternsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5335E4FB2644D95900DB3BF5 /* DesignPatternsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternsUITests.swift; sourceTree = "<group>"; };
 		5335E4FD2644D95900DB3BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53CD851A26A65FA400C361D3 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				5312D27B2670627A00D026A7 /* HomeScreen.swift */,
 				5312D2832670641B00D026A7 /* CodeView.swift */,
+				53CD851A26A65FA400C361D3 /* EmployeeCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				5312D2842670641B00D026A7 /* CodeView.swift in Sources */,
 				5335E4E12644D95500DB3BF5 /* DesignPatterns.xcdatamodeld in Sources */,
 				5335E4D92644D95500DB3BF5 /* SceneDelegate.swift in Sources */,
+				53CD851B26A65FA400C361D3 /* EmployeeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

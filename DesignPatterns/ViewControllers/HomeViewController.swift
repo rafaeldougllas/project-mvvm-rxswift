@@ -27,6 +27,8 @@ class HomeViewController: UIViewController {
         homeScreen.table.dataSource = self
         homeScreen.table.delegate = self
         
+        homeScreen.table.register(EmployeeCell.self, forCellReuseIdentifier: "employeesCell")
+        
         initViewModel()
     }
     
@@ -53,9 +55,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return homeViewModel.numberOfItems
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "employeesCell", for: indexPath) as! EmployeeCell
+        
         let employee = homeViewModel.getData(at: indexPath)
-        cell.textLabel?.text = employee.employee_name
+        cell.employee = employee
+        
+        cell.loadingIndicator.startAnimating()
+        
         return cell
     }
     

@@ -8,14 +8,6 @@ import UIKit
 
 final class HomeScreen: UIView {
     
-    lazy var button: UIButton = {
-        let view = UIButton(frame: .zero)
-        view.setTitle("fech", for: .normal)
-        view.backgroundColor = .red
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     lazy var table: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
