@@ -1,12 +1,12 @@
 //
-//  HomeScreen.swift
+//  HomeView.swift
 //  DesignPatterns
 //
 //  Created by Rafael Douglas on 08/06/21.
 //
 import UIKit
 
-final class HomeScreen: UIView {
+final class HomeView: UIView {
     
     lazy var table: UITableView = {
         let table = UITableView()
@@ -23,10 +23,9 @@ final class HomeScreen: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
-extension HomeScreen: CodeView {
+extension HomeView: CodeView {
     func buildViewHierarchy() {
         addSubview(table)
     }

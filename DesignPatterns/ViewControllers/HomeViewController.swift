@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var homeScreen = HomeScreen()
+    var homeView = HomeView()
     
     lazy var homeViewModel: HomeViewModel = {
         return HomeViewModel()
@@ -22,12 +22,12 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
         
-        view = homeScreen
+        view = homeView
         
-        homeScreen.table.dataSource = self
-        homeScreen.table.delegate = self
+        homeView.table.dataSource = self
+        homeView.table.delegate = self
         
-        homeScreen.table.register(EmployeeCell.self, forCellReuseIdentifier: "employeesCell")
+        homeView.table.register(EmployeeCell.self, forCellReuseIdentifier: "employeesCell")
         
         initViewModel()
     }
@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
         // Setup for reloadTableViewClosure
         homeViewModel.reloadTableViewClosure = { [weak self] () in
             DispatchQueue.main.async {
-                self?.homeScreen.table.reloadData()
+                self?.homeView.table.reloadData()
             }
         }
         
@@ -67,6 +67,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let employee = homeViewModel.getData(at: indexPath)
-        print(employee)
+        let detailViewController = DetailViewController()
+        detailViewController.employee = employee
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
